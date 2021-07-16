@@ -36,12 +36,12 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 ## Benchmark
 
 1. **XNLI**: "XNLI: Evaluating Cross-lingual Sentence Representations". `EMNLP(2018)` [[PDF]](https://aclanthology.org/D18-1269.pdf) [[Dataset]](https://github.com/facebookresearch/XNLI)
-2. **GLUE**: "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding". `ICLR(2019)` [[HOMEPAGE]](https://gluebenchmark.com/)
-3. **SuperGLUE**: "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems". `NeurIPS(2019)` [[HOMEPAGE]](https://super.gluebenchmark.com/)
-4. **CLUE**: "CLUE: A Chinese Language Understanding Evaluation Benchmark". `COLING(2020)` [[HOMEPAGE]](https://www.cluebenchmarks.com/)
-5. **XTREME**: "XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization". `ICML(2020)` [[HOMEPAGE]](https://sites.research.google/xtreme)
-6. **XGLUE**: "XGLUE: A New Benchmark Datasetfor Cross-lingual Pre-training, Understanding and Generation". `EMNLP(2020)` [[HOMEPAGE]](https://microsoft.github.io/XGLUE/)
-7. **DialoGLUE**: "DialoGLUE: A Natural Language Understanding Benchmark for Task-Oriented Dialogue". `arXiv(2020)` [[HOMEPAGE]](https://eval.ai/web/challenges/challenge-page/708/overview)
+2. **GLUE**: "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding". `ICLR(2019)` [[Homepage]](https://gluebenchmark.com/)
+3. **SuperGLUE**: "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems". `NeurIPS(2019)` [[Homepage]](https://super.gluebenchmark.com/)
+4. **CLUE**: "CLUE: A Chinese Language Understanding Evaluation Benchmark". `COLING(2020)` [[Homepage]](https://www.cluebenchmarks.com/)
+5. **XTREME**: "XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization". `ICML(2020)` [[Homepage]](https://sites.research.google/xtreme)
+6. **XGLUE**: "XGLUE: A New Benchmark Datasetfor Cross-lingual Pre-training, Understanding and Generation". `EMNLP(2020)` [[Homepage]](https://microsoft.github.io/XGLUE/)
+7. **DialoGLUE**: "DialoGLUE: A Natural Language Understanding Benchmark for Task-Oriented Dialogue". `arXiv(2020)` [[Homepage]](https://eval.ai/web/challenges/challenge-page/708/overview)
 
 ## PLM Design
 
