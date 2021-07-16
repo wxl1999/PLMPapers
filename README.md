@@ -200,7 +200,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 4.  **MT-DNN**: "Multi-Task Deep Neural Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1441.pdf) [[Code]](https://github.com/namisan/mt-dnn)
 5. "To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks". `ACL(2019)` [[PDF]](https://aclanthology.org/W19-4302.pdf)
 6. **Adapter**: "Parameter-Efficient Transfer Learning for NLP". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/houlsby19a/houlsby19a.pdf) [[Code]](https://github.com/google-research/adapter-bert)
-7. "BAM! Born-Again Multi-Task Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1595.pdf) [[Code]](https://github.com/google-research/google-research/tree/master/bam)\
+7. "BAM! Born-Again Multi-Task Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1595.pdf) [[Code]](https://github.com/google-research/google-research/tree/master/bam)
 8. "An Embarrassingly Simple Approach for Transfer Learning from Pretrained Language Models". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1213.pdf) [[Code]](https://github.com/alexandra-chron/siatl)
 9. "How to Fine-Tune BERT for Text Classification?". `CCL(2019)` [[PDF]](http://cips-cl.org/static/anthology/CCL-2019/CCL-19-141.pdf)
 10. "Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1904.09482.pdf) [[Code]](https://github.com/namisan/mt-dnn)
