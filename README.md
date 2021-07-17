@@ -1,6 +1,6 @@
 # PLM papers
 
-![](https://img.shields.io/github/last-commit/wxl1999/PLMPapers?color=blue) ![](https://img.shields.io/badge/PaperNumber-165-brightgreen) ![](https://img.shields.io/badge/PRs-Welcome-red)
+![](https://img.shields.io/github/last-commit/wxl1999/PLMPapers?color=blue) ![](https://img.shields.io/badge/PaperNumber-163-brightgreen) ![](https://img.shields.io/badge/PRs-Welcome-red)
 
 Large-scale pre-trained language models (PLMs) such as BERT and GPT have achieved great success and become a milestone in NLP.
 
@@ -13,13 +13,23 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 - [Benchmark](#benchmark)
 - [PLM Design](#plm-design)
   - [General](#general)
+  - [Knowledge](#knowledge)
   - [Multilingual](#multilingual)
   - [Multi-Modal](#multi-modal)
+  - [Information Retrieval](#information-retrieval)
 - [PLM Analysis](#plm-analysis)
+  - [Knowledge](#knowledge-1)
+  - [Robustness](#robustness)
+  - [Sparsity](#sparsity)
+  - [Others](#others)
 - [Efficient PLM](#efficient-plm)
   - [Training](#training)
   - [Compression](#compression)
 - [PLM Adaptation](#plm-adaptation)
+  - [General](#general-1)
+  - [Multi-Task](#multi-task)
+  - [Adapater](#adapater)
+  - [Prompt](#prompt)
 
 ## Survey
 
@@ -40,7 +50,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 3. **SuperGLUE**: "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems". `NeurIPS(2019)` [[Homepage]](https://super.gluebenchmark.com/)
 4. **CLUE**: "CLUE: A Chinese Language Understanding Evaluation Benchmark". `COLING(2020)` [[Homepage]](https://www.cluebenchmarks.com/)
 5. **XTREME**: "XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization". `ICML(2020)` [[Homepage]](https://sites.research.google/xtreme)
-6. **XGLUE**: "XGLUE: A New Benchmark Datasetfor Cross-lingual Pre-training, Understanding and Generation". `EMNLP(2020)` [[Homepage]](https://microsoft.github.io/XGLUE/)
+6. **XGLUE**: "XGLUE: A New Benchmark Dataset for Cross-lingual Pre-training, Understanding and Generation". `EMNLP(2020)` [[Homepage]](https://microsoft.github.io/XGLUE/)
 7. **DialoGLUE**: "DialoGLUE: A Natural Language Understanding Benchmark for Task-Oriented Dialogue". `arXiv(2020)` [[Homepage]](https://eval.ai/web/challenges/challenge-page/708/overview)
 
 ## PLM Design
@@ -54,35 +64,35 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 5. **SBERT**: "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks". `ACL(2019)` [[PDF]](https://aclanthology.org/D19-1410.pdf) [[Code]](https://github.com/UKPLab/sentence-transformers)
 6. **UniLM**: "Unified Language Model Pre-training for Natural Language Understanding and Generation". `NeurIPS(2019)` [[PDF]](https://proceedings.neurips.cc/paper/2019/file/c20bb2d9a50d5ac1f713f8b34d9aac5a-Paper.pdf) [[Code]](https://github.com/microsoft/unilm)
 7. **MASS**: "MASS: Masked Sequence to Sequence Pre-training for Language Generation". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/song19d/song19d.pdf) [[Code]](https://github.com/microsoft/MASS)
-8. **ERNIE(Baidu)**: "ERNIE: Enhanced Representation through Knowledge Integration". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1904.09223) [[Code]](https://github.com/PaddlePaddle/LARK/tree/develop/ERNIE)
-9. **KnowBert**: "Knowledge Enhanced Contextual Word Representations". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1005.pdf)
-10. **Chinese-BERT-wwm**: "Pre-Training with Whole Word Masking for Chinese BERT". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1906.08101.pdf) [[Code]](https://github.com/ymcui/Chinese-BERT-wwm)
-11. "Cloze-driven Pretraining of Self-attention Networks". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1539.pdf)
-12. **ERNIE(Tsinghua)**: "ERNIE: Enhanced Language Representation with Informative Entities". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1139.pdf) [[Code]](https://github.com/thunlp/ERNIE)
-13. "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model". `Workshop on Methods for Optimizing and Evaluating Neural Language Generation(2019)` [[PDF]](https://aclanthology.org/W19-2304.pdf) [[Code]](https://github.com/nyu-dl/bert-gen)
-14. **COMET**: "COMET: Commonsense Transformers for Automatic Knowledge Graph Construction". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1470.pdf) [[Code]](https://github.com/atcbosselut/comet-commonsense)
-15. **GPT-3**: "Language Models are Few-Shot Learners". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2005.14165) [[Code]](https://github.com/openai/gpt-3)
-16. **T5**: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer". `JMLR(2020)` [[PDF]](https://jmlr.org/papers/volume21/20-074/20-074.pdf) [[Code]](https://github.com/google-research/text-to-text-transfer-transformer)
-17. **BART**: "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.703.pdf) [[Code]](https://github.com/pytorch/fairseq)
-18. **Poly-encoders**: "Poly-encoders: Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=SkxgnnNFvH)
-19. **ELECTRA**: "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=r1xMH1BtvB) [[Code]](https://github.com/google-research/electra)
-20. **SpanBERT**: "SpanBERT: Improving Pre-training by Representing and Predicting Spans". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.5.pdf) [[Code]](https://github.com/facebookresearch/SpanBERT)
-21. **ERNIE 2.0**: "ERNIE 2.0: A Continual Pre-Training Framework for Language Understanding". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6428/6284) [[Code]](https://github.com/PaddlePaddle/ERNIE)
-22. **REALM**: "REALM: Retrieval-Augmented Language Model Pre-Training". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.08909)
-23. **K-BERT**: "K-BERT: Enabling Language Representation with Knowledge Graph". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/5681/5537) [[Code]](https://github.com/autoliuweijie/K-BERT)
-24. **SemBERT**: "Semantics-Aware BERT for Language Understanding". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6510/6366) [[Code]](https://github.com/cooelf/)
-25. **RAG**: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf) [[Code]](https://github.com/huggingface/transformers/blob/master/examples/rag/)
-26. "Leveraging Pre-trained Checkpoints for Sequence Generation Tasks". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.18.pdf) [[Code]](https://github.com/google-research/google-research/tree/master/bertseq2seq)
-27. **ProphetNet**: "ProphetNet: Predicting Future N-gram for Sequence-to-SequencePre-training". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.findings-emnlp.217.pdf)
-28. **UniLMv2**: "UniLMv2: Pseudo-Masked Language Models for Unified Language Model Pre-Training". `ICML(2020)` [[PDF]](http://proceedings.mlr.press/v119/bao20a/bao20a.pdf) [[Code]](https://github.com/microsoft/unilm)
-29. **MacBERT**: "Revisiting Pre-Trained Models for Chinese Natural Language Processing". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.findings-emnlp.58.pdf) [[Code]](https://github.com/ymcui/MacBERT)
-30. **MPNet**: "MPNet: Masked and Permuted Pre-training for Language Understanding". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2004.09297) [[Code]](https://github.com/microsoft/MPNet)
-31. **DEBERTA**: "DeBERTa: Decoding-enhanced BERT with Disentangled Attention". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=XPZIaotutsD) [[Code]](https://github.com/microsoft/DeBERTa)
-32. **PALM**: "PALM: Pre-training an Autoencoding&Autoregressive Language Model for Context-conditioned Generation". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.700.pdf)
-33. **WKLM**: "Pretrained Encyclopedia: Weakly Supervised Knowledge-Pretrained Language Model". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=BJlzm64tDH)
-34. **K-Adapter**: "K-Adapter: Infusing Knowledge into Pre-Trained Models with Adapters". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=CLnj31GZ4cI)
-35. **Switch Transformers**: "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.03961) [[Code]](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py)
-36. **KEPLER**: "KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation". `TACL(2021)` [[PDF]](https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00360/1923927/tacl_a_00360.pdf) [[Code]](https://github.com/THU-KEG/KEPLER)
+8.  **Chinese-BERT-wwm**: "Pre-Training with Whole Word Masking for Chinese BERT". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1906.08101.pdf) [[Code]](https://github.com/ymcui/Chinese-BERT-wwm)
+9.  "Cloze-driven Pretraining of Self-attention Networks". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1539.pdf)
+10. "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model". `Workshop on Methods for Optimizing and Evaluating Neural Language Generation(2019)` [[PDF]](https://aclanthology.org/W19-2304.pdf) [[Code]](https://github.com/nyu-dl/bert-gen)
+11. **GPT-3**: "Language Models are Few-Shot Learners". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2005.14165) [[Code]](https://github.com/openai/gpt-3)
+12. **T5**: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer". `JMLR(2020)` [[PDF]](https://jmlr.org/papers/volume21/20-074/20-074.pdf) [[Code]](https://github.com/google-research/text-to-text-transfer-transformer)
+13. **BART**: "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.703.pdf) [[Code]](https://github.com/pytorch/fairseq)
+14. **Poly-encoders**: "Poly-encoders: Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=SkxgnnNFvH)
+15. **SpanBERT**: "SpanBERT: Improving Pre-training by Representing and Predicting Spans". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.5.pdf) [[Code]](https://github.com/facebookresearch/SpanBERT)
+16. **ERNIE 2.0**: "ERNIE 2.0: A Continual Pre-Training Framework for Language Understanding". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6428/6284) [[Code]](https://github.com/PaddlePaddle/ERNIE)
+17. **SemBERT**: "Semantics-Aware BERT for Language Understanding". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6510/6366) [[Code]](https://github.com/cooelf/)
+18. "Leveraging Pre-trained Checkpoints for Sequence Generation Tasks". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.18.pdf) [[Code]](https://github.com/google-research/google-research/tree/master/bertseq2seq)
+19. **ProphetNet**: "ProphetNet: Predicting Future N-gram for Sequence-to-SequencePre-training". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.findings-emnlp.217.pdf)
+20. **UniLMv2**: "UniLMv2: Pseudo-Masked Language Models for Unified Language Model Pre-Training". `ICML(2020)` [[PDF]](http://proceedings.mlr.press/v119/bao20a/bao20a.pdf) [[Code]](https://github.com/microsoft/unilm)
+21. **MacBERT**: "Revisiting Pre-Trained Models for Chinese Natural Language Processing". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.findings-emnlp.58.pdf) [[Code]](https://github.com/ymcui/MacBERT)
+22. **MPNet**: "MPNet: Masked and Permuted Pre-training for Language Understanding". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2004.09297) [[Code]](https://github.com/microsoft/MPNet)
+23. **DEBERTA**: "DeBERTa: Decoding-enhanced BERT with Disentangled Attention". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=XPZIaotutsD) [[Code]](https://github.com/microsoft/DeBERTa)
+24. **PALM**: "PALM: Pre-training an Autoencoding&Autoregressive Language Model for Context-conditioned Generation". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.700.pdf)
+
+### Knowledge
+
+1. **ERNIE(Baidu)**: "ERNIE: Enhanced Representation through Knowledge Integration". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1904.09223) [[Code]](https://github.com/PaddlePaddle/LARK/tree/develop/ERNIE)
+2. **KnowBert**: "Knowledge Enhanced Contextual Word Representations". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1005.pdf)
+3. **ERNIE(Tsinghua)**: "ERNIE: Enhanced Language Representation with Informative Entities". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1139.pdf) [[Code]](https://github.com/thunlp/ERNIE)
+4. **COMET**: "COMET: Commonsense Transformers for Automatic Knowledge Graph Construction". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1470.pdf) [[Code]](https://github.com/atcbosselut/comet-commonsense)
+5. **K-BERT**: "K-BERT: Enabling Language Representation with Knowledge Graph". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/5681/5537) [[Code]](https://github.com/autoliuweijie/K-BERT)
+6. **WKLM**: "Pretrained Encyclopedia: Weakly Supervised Knowledge-Pretrained Language Model". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=BJlzm64tDH)
+7.  **LUKE**: "LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.523.pdf) [[Code]](https://github.com/studio-ousia/luke)
+8.  **K-Adapter**: "K-Adapter: Infusing Knowledge into Pre-Trained Models with Adapters". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=CLnj31GZ4cI)
+9.  **KEPLER**: "KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation". `TACL(2021)` [[PDF]](https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00360/1923927/tacl_a_00360.pdf) [[Code]](https://github.com/THU-KEG/KEPLER)
 
 ### Multilingual
 
@@ -119,7 +129,16 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 19. **DALL·E**: "Zero-Shot Text-to-Image Generation". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2102.12092.pdf) [[Code]](https://github.com/openai/DALL-E)
 20. **CLIP**: "Learning Transferable Visual Models From Natural Language Supervision". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2103.00020.pdf) [[Code]](https://github.com/OpenAI/CLIP)
 
+### Information Retrieval
+
+1. **ORQA**: "Latent Retrieval for Weakly Supervised Open Domain Question Answering". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1612.pdf)
+2. **REALM**: "REALM: Retrieval-Augmented Language Model Pre-Training". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.08909)
+3. **RAG**: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf) [[Code]](https://github.com/huggingface/transformers/blob/master/examples/rag/)
+4. **DPR**: "Dense Passage Retrieval for Open-Domain Question Answering". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.550.pdf) [[Code]](https://github.com/facebookresearch/DPR)
+
 ## PLM Analysis
+
+### Knowledge
 
 1. "What Does BERT Look at? An Analysis of BERT’s Attention". `BlackBoxNLP(2019)` [[PDF]](https://aclanthology.org/W19-4828.pdf) [[Code]](https://github.com/clarkkev/attention-analysis)
 2. "BERT Rediscovers the Classical NLP Pipeline". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1452.pdf)
@@ -128,39 +147,47 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 5. "Language Models as Knowledge Bases?". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1250.pdf) [[Code]](https://github.com/facebookresearch/LAMA)
 6. "What Does BERT Learn about the Structure of Language?". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1356.pdf) [[Code]](https://github.com/ganeshjawahar/)
 7. "Linguistic Knowledge and Transferability of Contextual Representations". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1112.pdf)
-8. "Are Sixteen Heads Really Better than One?". `NeurIPS(2019)` [[PDF]](https://proceedings.neurips.cc/paper/2019/file/2c601ad9d2ff9bc8b282670cdd54f69f-Paper.pdf) [[Code]](https://github.com/pmichel31415/are-16-heads-really-better-than-1)
-9. "Assessing BERT's Syntactic Abilities". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1901.05287.pdf) [[Code]](https://github.com/yoavg/bert-syntax)
-10. "Probing Neural Network Comprehension of Natural Language Arguments" `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1459.pdf)
-11. "Revealing the Dark Secrets of BERT". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1445.pdf)
-12. "How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1006.pdf)
-13. "Visualizing and Measuring the Geometry of BERT". `NeurIPS(2019)` [[PDF]](https://proceedings.neurips.cc/paper/2019/file/159c1ffe5b61b41b3c4d8f4c2150f6c4-Paper.pdf)
-14. "Designing and Interpreting Probes with Control Tasks". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1275.pdf)
-15. "Open Sesame: Getting inside BERT’s Linguistic Knowledge". `BlackboxNLP(2019)` [[PDF]](https://aclanthology.org/W19-4825.pdf) [[Code]](https://github.com/yongjie-lin/bert-opensesame)
-16. "Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1580.pdf) [[Code]](https://github.com/lena-voita/the-story-of-heads)
-17. "A Structural Probe for Finding Syntax in Word Representations". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1419.pdf) [[Code]](https://github.com/john-hewitt/structural-probes)
-18. "What do you learn from context? Probing for sentence structure in contextualized word representations". `ICLR(2019)` [[PDF]](https://openreview.net/pdf?id=SJzSgnRcKX) [[Code]](https://github.com/jsalt18-sentence-repl/jiant)
-19. "Commonsense Knowledge Mining from Pretrained Models". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1109.pdf)
-20. "Do NLP Models Know Numbers? Probing Numeracy in Embeddings". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1534.pdf)
-21. "Probing Neural Network Comprehension of Natural Language Arguments". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1459.pdf) [[Code]](https://github.com/IKMLab/arct2)
-22. "Universal Adversarial Triggers for Attacking and Analyzing NLP". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1221.pdf) [[Code]](https://github.com/Eric-Wallace/universal-triggers)
-23. "On the Cross-lingual Transferability of Monolingual Representations". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.421.pdf)
-24. "Cross-Lingual Ability of Multilingual BERT: An Empirical Study". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=HJeT3yrtDr) [[Code]](https://github.com/CogComp/mbert-study)
-25. "What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.3.pdf) [[Code]](https://github.com/aetting/lm-diagnostics)
-26. "How Much Knowledge Can You Pack Into the Parameters of a Language Model?". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.437.pdf) [[Code]](https://goo.gle/t5-cbqa)
-27. "How Can We Know What Language Models Know?". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.28.pdf) [[Code]](https://github.com/jzbjyb/LPAQA)
-28. "Scaling Laws for Neural Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2001.08361.pdf)
-29. "oLMpics-On What Language Model Pre-training Captures". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.48.pdf) [[Code]](http://github.com/alontalmor/oLMpics)
-30. "Information-Theoretic Probing with Minimum Description Length". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.14.pdf) [[Code]](https://github.com/)
-31. "Pretrained Transformers Improve Out-of-Distribution Robustness". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.244.pdf) [[Code]](https://github.com/camelop/NLP-Robustness)
-32. "Extracting Training Data from Large Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2012.07805.pdf) [[Code]](https://github.com/ftramer/LM_Memorization)
-33. "Inducing Relational Knowledge from BERT". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6242/6098)
-34. **BERT-ATTACK**: "BERT-ATTACK: Adversarial Attack Against BERT Using BERT". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.500.pdf) [[Code]](https://github.com/LinyangLee/BERT-Attack)
-35. **AutoPrompt**: "AutoPrompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.346.pdf) [[Code]](http://ucinlp.github.io/autoprompt)
-36. "Emergent linguistic structure in artificial neural networks trained by self-supervision". `PNAS(2020)` [[PDF]](https://www.pnas.org/content/pnas/117/48/30046.full.pdf)
-37. "Evaluating Commonsense in Pre-Trained Language Models". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6523/6379) [[Code]](https://github.com/XuhuiZhou/CATS)
-38. "Inducing Relational Knowledge from BERT". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6242/6098)
-39. "Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6311/6167) [[Code]](https://github.com/jind11/TextFooler)
-40. "Scaling Laws for Neural Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2001.08361.pdf)
+8. "Assessing BERT's Syntactic Abilities". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1901.05287.pdf) [[Code]](https://github.com/yoavg/bert-syntax)
+9. "Probing Neural Network Comprehension of Natural Language Arguments" `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1459.pdf)
+10. "How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1006.pdf)
+11. "Visualizing and Measuring the Geometry of BERT". `NeurIPS(2019)` [[PDF]](https://proceedings.neurips.cc/paper/2019/file/159c1ffe5b61b41b3c4d8f4c2150f6c4-Paper.pdf)
+12. "Designing and Interpreting Probes with Control Tasks". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1275.pdf)
+13. "Open Sesame: Getting inside BERT’s Linguistic Knowledge". `BlackboxNLP(2019)` [[PDF]](https://aclanthology.org/W19-4825.pdf) [[Code]](https://github.com/yongjie-lin/bert-opensesame)
+14. "What do you learn from context? Probing for sentence structure in contextualized word representations". `ICLR(2019)` [[PDF]](https://openreview.net/pdf?id=SJzSgnRcKX) [[Code]](https://github.com/jsalt18-sentence-repl/jiant)
+15. "Commonsense Knowledge Mining from Pretrained Models". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1109.pdf)
+16. "Do NLP Models Know Numbers? Probing Numeracy in Embeddings". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1534.pdf)
+17. "On the Cross-lingual Transferability of Monolingual Representations". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.421.pdf)
+18. "Cross-Lingual Ability of Multilingual BERT: An Empirical Study". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=HJeT3yrtDr) [[Code]](https://github.com/CogComp/mbert-study)
+19. "What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.3.pdf) [[Code]](https://github.com/aetting/lm-diagnostics)
+20. "How Much Knowledge Can You Pack Into the Parameters of a Language Model?". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.437.pdf) [[Code]](https://goo.gle/t5-cbqa)
+21. "How Can We Know What Language Models Know?". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.28.pdf) [[Code]](https://github.com/jzbjyb/LPAQA)
+22. "oLMpics-On What Language Model Pre-training Captures". `TACL(2020)` [[PDF]](https://aclanthology.org/2020.tacl-1.48.pdf) [[Code]](http://github.com/alontalmor/oLMpics)
+23. "Information-Theoretic Probing with Minimum Description Length". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.14.pdf) [[Code]](https://github.com/)
+24. "Inducing Relational Knowledge from BERT". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6242/6098)
+25. **AutoPrompt**: "AutoPrompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.346.pdf) [[Code]](http://ucinlp.github.io/autoprompt)
+26. "Emergent linguistic structure in artificial neural networks trained by self-supervision". `PNAS(2020)` [[PDF]](https://www.pnas.org/content/pnas/117/48/30046.full.pdf)
+27. "Evaluating Commonsense in Pre-Trained Language Models". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6523/6379) [[Code]](https://github.com/XuhuiZhou/CATS)
+28. "Inducing Relational Knowledge from BERT". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6242/6098)
+
+### Robustness
+
+1. "Universal Adversarial Triggers for Attacking and Analyzing NLP". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1221.pdf) [[Code]](https://github.com/Eric-Wallace/universal-triggers)
+2. "Pretrained Transformers Improve Out-of-Distribution Robustness". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.244.pdf) [[Code]](https://github.com/camelop/NLP-Robustness)
+3. **BERT-ATTACK**: "BERT-ATTACK: Adversarial Attack Against BERT Using BERT". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.500.pdf) [[Code]](https://github.com/LinyangLee/BERT-Attack)
+4. "Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6311/6167) [[Code]](https://github.com/jind11/TextFooler)
+
+### Sparsity
+
+1. "Are Sixteen Heads Really Better than One?". `NeurIPS(2019)` [[PDF]](https://proceedings.neurips.cc/paper/2019/file/2c601ad9d2ff9bc8b282670cdd54f69f-Paper.pdf) [[Code]](https://github.com/pmichel31415/are-16-heads-really-better-than-1)
+2. "Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1580.pdf) [[Code]](https://github.com/lena-voita/the-story-of-heads)
+3. "Revealing the Dark Secrets of BERT". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1445.pdf)
+4. "The Lottery Ticket Hypothesis for Pre-trained BERT Networks". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/b6af2c9703f203a2794be03d443af2e3-Paper.pdf) [[Code]](https://github.com/VITA-Group/BERT-Tickets)
+5. "When BERT Plays the Lottery, All Tickets Are Winning". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.259.pdf) [[Code]](https://github.com/sai-prasanna/bert-experiments)
+
+### Others
+
+1. "Scaling Laws for Neural Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2001.08361.pdf)
+2. "Extracting Training Data from Large Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2012.07805.pdf) [[Code]](https://github.com/ftramer/LM_Memorization)
 
 ## Efficient PLM
 
@@ -169,10 +196,12 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 1. **RoBERTa**: "RoBERTa: A Robustly Optimized BERT Pretraining Approach". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1907.11692) [[Code]](https://github.com/pytorch/fairseq)
 2. "Efficient Training of BERT by Progressively Stacking". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/gong19a/gong19a.pdf) [[Code]](https://github.com/gonglinyuan/StackingBERT)
 3. **Megatron-LM**: "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1909.08053.pdf) [[Code]](https://github.com/NVIDIA/Megatron-LM)
-4. "Large Batch Optimization for Deep Learning: Training BERT in 76 minutes". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=Syx4wnEtvH) [[Code]](https://github.com/tensorflow/addons/blob/master/tensorflow_addons/optimizers/lamb.py)
-5. **GShard**: "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2006.16668.pdf)
-6. **Admin**: "Understanding the Difficulty of Training Transformers". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.463.pdf) [[Code]](https://github.com/LiyuanLucasLiu/Transforemr-Clinic)
-7. **ZeRO**: "ZeRO: Memory optimizations Toward Training Trillion Parameter Models". `SC20: International Conference for High Performance Computing, Networking, Storage and Analysis` [[PDF]](https://ieeexplore.ieee.org/abstract/document/9355301) [[Code]](https://github.com/microsoft/deepspeed)
+4. **ELECTRA**: "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=r1xMH1BtvB) [[Code]](https://github.com/google-research/electra)
+5. "Large Batch Optimization for Deep Learning: Training BERT in 76 minutes". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=Syx4wnEtvH) [[Code]](https://github.com/tensorflow/addons/blob/master/tensorflow_addons/optimizers/lamb.py)
+6. **GShard**: "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2006.16668.pdf)
+7. **Admin**: "Understanding the Difficulty of Training Transformers". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.463.pdf) [[Code]](https://github.com/LiyuanLucasLiu/Transforemr-Clinic)
+8. **ZeRO**: "ZeRO: Memory optimizations Toward Training Trillion Parameter Models". `SC20: International Conference for High Performance Computing, Networking, Storage and Analysis` [[PDF]](https://ieeexplore.ieee.org/abstract/document/9355301) [[Code]](https://github.com/microsoft/deepspeed)
+9. **Switch Transformers**: "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.03961) [[Code]](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py)
 
 ### Compression
 
@@ -189,30 +218,37 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 11. **MiniLM**: "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.10957.pdf) [[Code]](https://github.com/microsoft/unilm/tree/master/minilm)
 12. **FastBERT**: "FastBERT: a Self-distilling BERT with Adaptive Inference Time". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.537.pdf) [[Code]](https://github.com/autoliuweijie/FastBERT)
 13. **DeeBERT**: "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.204.pdf) [[Code]](https://github.com/castorini/DeeBERT)
-14. "The Lottery Ticket Hypothesis for Pre-trained BERT Networks". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/b6af2c9703f203a2794be03d443af2e3-Paper.pdf) [[Code]](https://github.com/VITA-Group/BERT-Tickets)
-15. "When BERT Plays the Lottery, All Tickets Are Winning". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.259.pdf) [[Code]](https://github.com/sai-prasanna/bert-experiments)
 
 ## PLM Adaptation
 
+### General
+
 1. "Sentence Encoders on STILTs: Supplementary Training on Intermediate Labeled-data Tasks". `arXiv(2018)` [[PDF]](https://arxiv.org/pdf/1811.01088.pdf) [[Code]](https://github.com/zphang/pytorch-pretrained-BERT)
 2. "To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks". `RepL4NLP(2019)` [[PDF]](https://aclanthology.org/W19-4302.pdf)
-3. "BERT and PALs: Projected Attention Layers for Efficient Adaptation in Multi-Task Learning". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/stickland19a/stickland19a.pdf) [[Code]](https://github.com/AsaCooperStickland/Bert-n-Pals)
-4.  **MT-DNN**: "Multi-Task Deep Neural Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1441.pdf) [[Code]](https://github.com/namisan/mt-dnn)
-5. "To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks". `ACL(2019)` [[PDF]](https://aclanthology.org/W19-4302.pdf)
-6. **Adapter**: "Parameter-Efficient Transfer Learning for NLP". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/houlsby19a/houlsby19a.pdf) [[Code]](https://github.com/google-research/adapter-bert)
-7. "BAM! Born-Again Multi-Task Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1595.pdf) [[Code]](https://github.com/google-research/google-research/tree/master/bam)
-8. "An Embarrassingly Simple Approach for Transfer Learning from Pretrained Language Models". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1213.pdf) [[Code]](https://github.com/alexandra-chron/siatl)
-9. "How to Fine-Tune BERT for Text Classification?". `CCL(2019)` [[PDF]](http://cips-cl.org/static/anthology/CCL-2019/CCL-19-141.pdf)
-10. "Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1904.09482.pdf) [[Code]](https://github.com/namisan/mt-dnn)
-11. "Fine-Tuning Pretrained Language Models: Weight Initializations, Data Orders, and Early Stopping". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.06305.pdf)
-12. "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.467.pdf)
-13. "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.740.pdf) [[Code]](https://github.com/allenai/dont-stop-pretraining)
-14. "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.467.pdf)
-15. **SMART**: "SMART: Robust and Efficient Fine-Tuning for Pre-trained Natural Language Models through Principled Regularized Optimization". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.197.pdf) [[Code]](https://github.com/namisan/mt-dnn)
-16. "Revisiting Few-sample BERT Fine-tuning". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=cO1IH43yUF)
-17. **PET**: "Exploiting Cloze-Questions for Few-Shot Text Classification and Natural Language Inference". `EACL(2021)` [[PDF]](https://aclanthology.org/2021.eacl-main.20.pdf) [[Code]](https://github.com/timoschick/pet)
-18. "It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners". `NAACL(2021)` [[PDF]](https://aclanthology.org/2021.naacl-main.185.pdf) [[Code]](https://github.com/timoschick/pet)
-19. "Prefix-Tuning: Optimizing Continuous Prompts for Generation". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.00190.pdf)
-20. **LM-BFF**: "Making Pre-trained Language Models Better Few-shot Learners". `ACL(2021)` [[PDF]](https://arxiv.org/pdf/2012.15723) [[Code]](https://github.com/princeton-nlp/LM-BFF)
-21. "What Makes Good In-Context Examples for GPT-3?". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.06804.pdf) [[Code]](https://github.com/google-research/language/tree/master/language/totto)
-22. "The Power of Scale for Parameter-Efficient Prompt Tuning". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2104.08691.pdf)
+3. "An Embarrassingly Simple Approach for Transfer Learning from Pretrained Language Models". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1213.pdf) [[Code]](https://github.com/alexandra-chron/siatl)
+4. "How to Fine-Tune BERT for Text Classification?". `CCL(2019)` [[PDF]](http://cips-cl.org/static/anthology/CCL-2019/CCL-19-141.pdf)
+5. "Fine-Tuning Pretrained Language Models: Weight Initializations, Data Orders, and Early Stopping". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.06305.pdf)
+6. "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.467.pdf)
+7. "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.740.pdf) [[Code]](https://github.com/allenai/dont-stop-pretraining)
+8. **SMART**: "SMART: Robust and Efficient Fine-Tuning for Pre-trained Natural Language Models through Principled Regularized Optimization". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.197.pdf) [[Code]](https://github.com/namisan/mt-dnn)
+9. "Revisiting Few-sample BERT Fine-tuning". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=cO1IH43yUF)
+
+### Multi-Task
+
+1. **MT-DNN**: "Multi-Task Deep Neural Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1441.pdf) [[Code]](https://github.com/namisan/mt-dnn)
+2. "BAM! Born-Again Multi-Task Networks for Natural Language Understanding". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1595.pdf) [[Code]](https://github.com/google-research/google-research/tree/master/bam)
+3. "Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1904.09482.pdf) [[Code]](https://github.com/namisan/mt-dnn)
+
+### Adapater
+
+1. "BERT and PALs: Projected Attention Layers for Efficient Adaptation in Multi-Task Learning". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/stickland19a/stickland19a.pdf) [[Code]](https://github.com/AsaCooperStickland/Bert-n-Pals)
+2. **Adapter**: "Parameter-Efficient Transfer Learning for NLP". `ICML(2019)` [[PDF]](http://proceedings.mlr.press/v97/houlsby19a/houlsby19a.pdf) [[Code]](https://github.com/google-research/adapter-bert)
+
+### Prompt
+
+1. **PET**: "Exploiting Cloze-Questions for Few-Shot Text Classification and Natural Language Inference". `EACL(2021)` [[PDF]](https://aclanthology.org/2021.eacl-main.20.pdf) [[Code]](https://github.com/timoschick/pet)
+2. "It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners". `NAACL(2021)` [[PDF]](https://aclanthology.org/2021.naacl-main.185.pdf) [[Code]](https://github.com/timoschick/pet)
+3. "Prefix-Tuning: Optimizing Continuous Prompts for Generation". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.00190.pdf)
+4. **LM-BFF**: "Making Pre-trained Language Models Better Few-shot Learners". `ACL(2021)` [[PDF]](https://arxiv.org/pdf/2012.15723) [[Code]](https://github.com/princeton-nlp/LM-BFF)
+5. "What Makes Good In-Context Examples for GPT-3?". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.06804.pdf) [[Code]](https://github.com/google-research/language/tree/master/language/totto)
+6. "The Power of Scale for Parameter-Efficient Prompt Tuning". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2104.08691.pdf)
