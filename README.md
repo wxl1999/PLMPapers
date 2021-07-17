@@ -26,10 +26,11 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
   - [Training](#training)
   - [Compression](#compression)
 - [PLM Adaptation](#plm-adaptation)
-  - [General](#general-1)
+  - [Two-Stage](#two-stage)
   - [Multi-Task](#multi-task)
   - [Adapater](#adapater)
   - [Prompt](#prompt)
+  - [Others](#others-1)
 
 ## Survey
 
@@ -221,17 +222,12 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 
 ## PLM Adaptation
 
-### General
+### Two-Stage
 
 1. "Sentence Encoders on STILTs: Supplementary Training on Intermediate Labeled-data Tasks". `arXiv(2018)` [[PDF]](https://arxiv.org/pdf/1811.01088.pdf) [[Code]](https://github.com/zphang/pytorch-pretrained-BERT)
-2. "To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks". `RepL4NLP(2019)` [[PDF]](https://aclanthology.org/W19-4302.pdf)
-3. "An Embarrassingly Simple Approach for Transfer Learning from Pretrained Language Models". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1213.pdf) [[Code]](https://github.com/alexandra-chron/siatl)
-4. "How to Fine-Tune BERT for Text Classification?". `CCL(2019)` [[PDF]](http://cips-cl.org/static/anthology/CCL-2019/CCL-19-141.pdf)
-5. "Fine-Tuning Pretrained Language Models: Weight Initializations, Data Orders, and Early Stopping". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.06305.pdf)
-6. "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.467.pdf)
-7. "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.740.pdf) [[Code]](https://github.com/allenai/dont-stop-pretraining)
-8. **SMART**: "SMART: Robust and Efficient Fine-Tuning for Pre-trained Natural Language Models through Principled Regularized Optimization". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.197.pdf) [[Code]](https://github.com/namisan/mt-dnn)
-9. "Revisiting Few-sample BERT Fine-tuning". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=cO1IH43yUF)
+2. "How to Fine-Tune BERT for Text Classification?". `CCL(2019)` [[PDF]](http://cips-cl.org/static/anthology/CCL-2019/CCL-19-141.pdf)
+3. "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.740.pdf) [[Code]](https://github.com/allenai/dont-stop-pretraining)
+4. "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.467.pdf)
 
 ### Multi-Task
 
@@ -252,3 +248,11 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 4. **LM-BFF**: "Making Pre-trained Language Models Better Few-shot Learners". `ACL(2021)` [[PDF]](https://arxiv.org/pdf/2012.15723) [[Code]](https://github.com/princeton-nlp/LM-BFF)
 5. "What Makes Good In-Context Examples for GPT-3?". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.06804.pdf) [[Code]](https://github.com/google-research/language/tree/master/language/totto)
 6. "The Power of Scale for Parameter-Efficient Prompt Tuning". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2104.08691.pdf)
+
+### Others
+
+1. "To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks". `RepL4NLP(2019)` [[PDF]](https://aclanthology.org/W19-4302.pdf)
+2. "An Embarrassingly Simple Approach for Transfer Learning from Pretrained Language Models". `NAACL(2019)` [[PDF]](https://aclanthology.org/N19-1213.pdf) [[Code]](https://github.com/alexandra-chron/siatl)
+3. "Fine-Tuning Pretrained Language Models: Weight Initializations, Data Orders, and Early Stopping". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.06305.pdf)
+4. **SMART**: "SMART: Robust and Efficient Fine-Tuning for Pre-trained Natural Language Models through Principled Regularized Optimization". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.197.pdf) [[Code]](https://github.com/namisan/mt-dnn)
+5. "Revisiting Few-sample BERT Fine-tuning". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=cO1IH43yUF)
