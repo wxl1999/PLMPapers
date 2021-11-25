@@ -162,6 +162,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 24. **CaiT**: "Going deeper with Image Transformers". `ICCV(2021)` [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Touvron_Going_Deeper_With_Image_Transformers_ICCV_2021_paper.pdf) [[Code]](https://github.com/facebookresearch/deit)
 25. **ViViT**: "ViViT: A Video Vision Transformer". `ICCV(2021)` [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Arnab_ViViT_A_Video_Vision_Transformer_ICCV_2021_paper.pdf) [[Code]](https://github.com/google-research/scenic)
 26. **VirTex**: "VirTex: Learning Visual Representations From Textual Annotations". `CVPR(2021)` [[PDF]](https://openaccess.thecvf.com/content/CVPR2021/papers/Desai_VirTex_Learning_Visual_Representations_From_Textual_Annotations_CVPR_2021_paper.pdf) [[Code]](https://github.com/kdexd/virtex)
+27. **M6**: "M6: Multi-Modality-to-Multi-Modality Multitask Mega-transformer for Unified Pretraining". `KDD(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3447548.3467206)
 
 ### Information Retrieval
 
@@ -318,6 +319,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 23. **AutoTinyBERT**: "AutoTinyBERT: Automatic Hyper-parameter Optimization for Efficient Pre-trained Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.400.pdf) [[Code]](https://github.com/huawei-noah/Pretrained-Language-Model)
 24. "Marginal Utility Diminishes: Exploring the Minimum Knowledge for BERT Knowledge Distillation". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.228.pdf) [[Code]](https://github.com/llyx97/Marginal-Utility-Diminishes)
 25. "Enabling Lightweight Fine-tuning for Pre-trained Language Model Compression based on Matrix Product Operators". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.418.pdf) [[Code]](https://github.com/RUCAIBox/MPOP)
+26. **NAS-BERT**: "NAS-BERT: Task-Agnostic and Adaptive-Size BERT Compression with Neural Architecture Search". `KDD(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3447548.3467262)
 
 ## PLM Adaptation
 
