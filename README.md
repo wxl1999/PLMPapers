@@ -115,6 +115,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 14. **StructFormer**: "StructFormer: Joint Unsupervised Induction of Dependency and Constituency Structure from Masked Language Modeling". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.559.pdf)
 15. **ERICA**: "ERICA: Improving Entity and Relation Understanding for Pre-trained Language Models via Contrastive Learning". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.260.pdf) [[Code]](https://github.com/thunlp/ERICA)
 16. "Structural Guidance for Transformer Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.289.pdf) [[Code]](https://github.com/IBM/transformers-struct-guidance)
+17. **HORNET**: "HORNET: Enriching Pre-trained Language Representations with Heterogeneous Knowledge Sources". `CIKM(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3459637.3482436)
 
 ### Multilingual
 
@@ -183,6 +184,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 4. **EnsLM**: "EnsLM: Ensemble Language Model for Data Diversity by Semantic Clustering". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.230.pdf) [[Code]](https://github.com/BoChenGroup/EnsLM)
 5. "Reflective Decoding: Beyond Unidirectional Generation with Off-the-Shelf Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.114.pdf) [[Code]](https://homes.cs.washington.edu/~pawest/ReflectiveDecoding.html)
 6. **BERTAC**: "BERTAC: Enhancing Transformer-based Language Models with Adversarially Pretrained Convolutional Neural Networks". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.164.pdf) [[Code]](https://github.com/nict-wisdom/bertac)
+7. "Natural Language Understanding with Privacy-Preserving BERT". `CIKM(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3459637.3482281)
 
 ## PLM Analysis
 
@@ -287,6 +289,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 4. **GhostBERT**: "GhostBERT: Generate More Features with Cheap Operations for BERT". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.509.pdf) [[Code]](https://gitee.com/mindspore/mindspore/tree/master/model_zoo/research/nlp/ghostbert)
 5. **LeeBERT**: "LeeBERT: Learned Early Exit for BERT with cross-level optimization". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.231.pdf)
 6. "Length-Adaptive Transformer: Train Once with Length Drop, Use Anytime with Search". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.508.pdf) [[Code]](https://github.com/clovaai/length-adaptive-transformer)
+7. "Distilling Knowledge from BERT into Simple Fully Connected Neural Networks for Efficient Vertical Retrieval". `CIKM(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3459637.3481909)
 
 ### Compression
 
