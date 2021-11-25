@@ -8,7 +8,7 @@ In this repo, we collect some representative PLM papers in recent years based on
 
 We will keep the repo updated and welcome pull requests and issues! Thanks for your stars and forks!
 
-## Table of Contents
+**Table of Contents**
 - [Survey](#survey)
 - [Benchmark](#benchmark)
 - [PLM Design](#plm-design)
@@ -24,6 +24,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
   - [Others](#others)
 - [Efficient PLM](#efficient-plm)
   - [Training](#training)
+  - [Inference](#inference)
   - [Compression](#compression)
 - [PLM Adaptation](#plm-adaptation)
   - [Two-Stage](#two-stage)
@@ -42,7 +43,11 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 6. "A Survey on Contextual Embeddings". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2003.07278)
 7. "The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures". `IEEE Access(2021)` [[PDF]](https://ieeexplore.ieee.org/abstract/document/9422763)
 8. "Pre-Trained Models: Past, Present and Future". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2106.07139)
-9. "A Survey of Transformers". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2106.04554)
+9.  "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2107.13586)
+10. "AMMUS : A Survey of Transformer-based Pretrained Models in Natural Language Processing". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2108.05542)
+11. "On the Opportunities and Risks of Foundation Models". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2108.07258)
+12. "Paradigm Shift in Natural Language Processing". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2109.12575)
+13. "Recent Advances in Natural Language Processing via Large Pre-Trained Language Models: A Survey". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2111.01243)
 
 ## Benchmark
 
@@ -68,7 +73,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 8.  **Chinese-BERT-wwm**: "Pre-Training with Whole Word Masking for Chinese BERT". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1906.08101.pdf) [[Code]](https://github.com/ymcui/Chinese-BERT-wwm)
 9.  "Cloze-driven Pretraining of Self-attention Networks". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1539.pdf)
 10. "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model". `Workshop on Methods for Optimizing and Evaluating Neural Language Generation(2019)` [[PDF]](https://aclanthology.org/W19-2304.pdf) [[Code]](https://github.com/nyu-dl/bert-gen)
-11. **GPT-3**: "Language Models are Few-Shot Learners". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2005.14165) [[Code]](https://github.com/openai/gpt-3)
+11. **GPT-3**: "Language Models are Few-Shot Learners". `NeurIPS(2020)` [[PDF]](https://papers.nips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf) [[Code]](https://github.com/openai/gpt-3)
 12. **T5**: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer". `JMLR(2020)` [[PDF]](https://jmlr.org/papers/volume21/20-074/20-074.pdf) [[Code]](https://github.com/google-research/text-to-text-transfer-transformer)
 13. **BART**: "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.703.pdf) [[Code]](https://github.com/pytorch/fairseq)
 14. **Poly-encoders**: "Poly-encoders: Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=SkxgnnNFvH)
@@ -82,6 +87,8 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 22. **MPNet**: "MPNet: Masked and Permuted Pre-training for Language Understanding". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2004.09297) [[Code]](https://github.com/microsoft/MPNet)
 23. **DEBERTA**: "DeBERTa: Decoding-enhanced BERT with Disentangled Attention". `ICLR(2021)` [[PDF]](https://openreview.net/pdf?id=XPZIaotutsD) [[Code]](https://github.com/microsoft/DeBERTa)
 24. **PALM**: "PALM: Pre-training an Autoencoding&Autoregressive Language Model for Context-conditioned Generation". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.700.pdf)
+25. **Optimus**: "Optimus: Organizing Sentences via Pre-trained Modeling of a Latent Space". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.378.pdf) [[Code]](https://github.com/ChunyuanLI/Optimus)
+26. "Self-training Improves Pre-training for Natural Language Understanding". `NAACL(2021)` [[PDF]](https://aclanthology.org/2021.naacl-main.426.pdf) [[Code]](https://github.com/facebookresearch/SentAugment)
 
 ### Knowledge
 
@@ -112,23 +119,29 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 1. **ViLBERT**: "ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks". `NeuralIPS(2019)` [[PDF]](https://proceedings.neurips.cc/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf)
 2. **LXMERT**: "LXMERT: Learning Cross-Modality Encoder Representations from Transformers". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1514.pdf) [[Code]](https://github.com/airsplay/lxmert)
 3. **VideoBERT**: "VideoBERT: A Joint Model for Video and Language Representation Learning" `ICCV(2019)` [[PDF]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)
-4. **MulT**: "Multimodal Transformer for Unaligned Multimodal Language Sequences". `ACL(2019)` [[PDF]](https://aclanthology.org/P19-1656.pdf) [[Code]](https://github.com/yaohungt/Multimodal-Transformer)
-5. **VisualBERT**: "VisualBERT: A Simple and Performant Baseline for Vision and Language". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1908.03557.pdf)
-6. **B2T2**: "Fusion of Detected Objects in Text for Visual Question Answering". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1219.pdf) [[Code]](https://github.com/google-research/language/tree/master/language/question_answering/b2t2)
-7. **VL-BERT**: "VL-BERT: Pre-training of Generic Visual-Linguistic Representations". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=SygXPaEYvH) [[Code]](https://github.com/jackroos/VL-BERT)
-8. **Unicoder-VL**: "Unicoder-VL: A Universal Encoder for Vision and Language by Cross-Modal Pre-Training". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6795/6649)
-9. **VLP**: "Unified Vision-Language Pre-Training for Image Captioning and VQA". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/7005/6859) [[Code]](https://github.com/LuoweiZhou/VLP)
-10. **UNITER**: "UNITER: UNiversal Image-TExt Representation Learning". `ECCV(2020)` [[PDF]](https://arxiv.org/pdf/1909.11740) [[Code]](https://github.com/ChenRocks/UNITER)
-11. **Oscar**: "Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks". `ECCV(2020)` [[PDF]](https://arxiv.org/pdf/2004.06165) [[Code]](https://github.com/microsoft/Oscar)
-12. "12-in-1: Multi-Task Vision and Language Representation Learning". `CVPR(2020)` [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Lu_12-in-1_Multi-Task_Vision_and_Language_Representation_Learning_CVPR_2020_paper.pdf) [[Code]](https://github.com/facebookresearch/vilbert-multi-task)
-13. **ActBERT**: "ActBERT: Learning Global-Local Video-Text Representations". `CVPR(2020)` [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)
-14. **VLN**: "Vision-Language Navigation With Self-Supervised Auxiliary Reasoning Tasks". `CVPR(2020)` [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_Vision-Language_Navigation_With_Self-Supervised_Auxiliary_Reasoning_Tasks_CVPR_2020_paper.pdf)
-15. **VILLA**: "Large-Scale Adversarial Training for Vision-and-Language Representation Learning". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2006.06195.pdf) [[Code]](https://github.com/zhegan27/VILLA)
-16. **ImageBERT**: "ImageBERT: Cross-modal Pre-training with Large-scale Weak-supervised Image-Text Data". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2001.07966.pdf)
-17. **ALIGN**: "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision". `ICML(2021)` [[PDF]](https://arxiv.org/pdf/2102.05918.pdf) 
-18. **ClipBERT**: "Less Is More: ClipBERT for Video-and-Language Learning via Sparse Sampling". `CVPR(2021)` [[PDF]](https://openaccess.thecvf.com/content/CVPR2021/papers/Lei_Less_Is_More_ClipBERT_for_Video-and-Language_Learning_via_Sparse_Sampling_CVPR_2021_paper.pdf) [[Code]](https://github.com/jayleicn/ClipBERT)
-19. **DALL·E**: "Zero-Shot Text-to-Image Generation". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2102.12092.pdf) [[Code]](https://github.com/openai/DALL-E)
-20. **CLIP**: "Learning Transferable Visual Models From Natural Language Supervision". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2103.00020.pdf) [[Code]](https://github.com/OpenAI/CLIP)
+4. **VisualBERT**: "VisualBERT: A Simple and Performant Baseline for Vision and Language". `arXiv(2019)` [[PDF]](https://arxiv.org/pdf/1908.03557.pdf)
+5. **B2T2**: "Fusion of Detected Objects in Text for Visual Question Answering". `EMNLP(2019)` [[PDF]](https://aclanthology.org/D19-1219.pdf) [[Code]](https://github.com/google-research/language/tree/master/language/question_answering/b2t2)
+6. **VL-BERT**: "VL-BERT: Pre-training of Generic Visual-Linguistic Representations". `ICLR(2020)` [[PDF]](https://openreview.net/pdf?id=SygXPaEYvH) [[Code]](https://github.com/jackroos/VL-BERT)
+7. **Unicoder-VL**: "Unicoder-VL: A Universal Encoder for Vision and Language by Cross-Modal Pre-Training". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/6795/6649)
+8. **VLP**: "Unified Vision-Language Pre-Training for Image Captioning and VQA". `AAAI(2020)` [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/7005/6859) [[Code]](https://github.com/LuoweiZhou/VLP)
+9.  **UNITER**: "UNITER: UNiversal Image-TExt Representation Learning". `ECCV(2020)` [[PDF]](https://arxiv.org/pdf/1909.11740) [[Code]](https://github.com/ChenRocks/UNITER)
+10. **Oscar**: "Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks". `ECCV(2020)` [[PDF]](https://arxiv.org/pdf/2004.06165) [[Code]](https://github.com/microsoft/Oscar)
+11. "12-in-1: Multi-Task Vision and Language Representation Learning". `CVPR(2020)` [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Lu_12-in-1_Multi-Task_Vision_and_Language_Representation_Learning_CVPR_2020_paper.pdf) [[Code]](https://github.com/facebookresearch/vilbert-multi-task)
+12. **ActBERT**: "ActBERT: Learning Global-Local Video-Text Representations". `CVPR(2020)` [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)
+13. **VLN**: "Vision-Language Navigation With Self-Supervised Auxiliary Reasoning Tasks". `CVPR(2020)` [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_Vision-Language_Navigation_With_Self-Supervised_Auxiliary_Reasoning_Tasks_CVPR_2020_paper.pdf)
+14. **VILLA**: "Large-Scale Adversarial Training for Vision-and-Language Representation Learning". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2006.06195.pdf) [[Code]](https://github.com/zhegan27/VILLA)
+15. **ImageBERT**: "ImageBERT: Cross-modal Pre-training with Large-scale Weak-supervised Image-Text Data". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2001.07966.pdf)
+16. **ALIGN**: "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision". `ICML(2021)` [[PDF]](https://arxiv.org/pdf/2102.05918.pdf) 
+17. **ClipBERT**: "Less Is More: ClipBERT for Video-and-Language Learning via Sparse Sampling". `CVPR(2021)` [[PDF]](https://openaccess.thecvf.com/content/CVPR2021/papers/Lei_Less_Is_More_ClipBERT_for_Video-and-Language_Learning_via_Sparse_Sampling_CVPR_2021_paper.pdf) [[Code]](https://github.com/jayleicn/ClipBERT)
+18. **DALL·E**: "Zero-Shot Text-to-Image Generation". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2102.12092.pdf) [[Code]](https://github.com/openai/DALL-E)
+19. **CLIP**: "Learning Transferable Visual Models From Natural Language Supervision". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2103.00020.pdf) [[Code]](https://github.com/OpenAI/CLIP)
+20. **IPT**: "Pre-Trained Image Processing Transformer". `CVPR(2021)` [[PDF]](https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_Pre-Trained_Image_Processing_Transformer_CVPR_2021_paper.pdf) [[Code]](https://github.com/huawei-noah/Pretrained-IPT)
+21. **CvT**: "CvT: Introducing Convolutions to Vision Transformers". `ICCV(2021)` [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_CvT_Introducing_Convolutions_to_Vision_Transformers_ICCV_2021_paper.pdf) [[Code]](https://github.com/leoxiaobin/CvT)
+22. "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision". `ICML(2021)` [[PDF]](http://proceedings.mlr.press/v139/jia21b/jia21b.pdf)
+23. **TERA**: "TERA: Self-Supervised Learning of Transformer Encoder Representation for Speech". `TASLP(2021)` [[PDF]](https://ieeexplore.ieee.org/abstract/document/9478264) [[Code]](https://github.com/s3prl/s3prl)
+24. **CaiT**: "Going deeper with Image Transformers". `ICCV(2021)` [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Touvron_Going_Deeper_With_Image_Transformers_ICCV_2021_paper.pdf) [[Code]](https://github.com/facebookresearch/deit)
+25. **ViViT**: "ViViT: A Video Vision Transformer". `ICCV(2021)` [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Arnab_ViViT_A_Video_Vision_Transformer_ICCV_2021_paper.pdf) [[Code]](https://github.com/google-research/scenic)
+26. **VirTex**: "VirTex: Learning Visual Representations From Textual Annotations". `CVPR(2021)` [[PDF]](https://openaccess.thecvf.com/content/CVPR2021/papers/Desai_VirTex_Learning_Visual_Representations_From_Textual_Annotations_CVPR_2021_paper.pdf) [[Code]](https://github.com/kdexd/virtex)
 
 ### Information Retrieval
 
@@ -136,6 +149,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 2. **REALM**: "REALM: Retrieval-Augmented Language Model Pre-Training". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.08909)
 3. **RAG**: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf) [[Code]](https://github.com/huggingface/transformers/blob/master/examples/rag/)
 4. **DPR**: "Dense Passage Retrieval for Open-Domain Question Answering". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.550.pdf) [[Code]](https://github.com/facebookresearch/DPR)
+5. "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering". `EACL(2021)` [[PDF]](https://aclanthology.org/2021.eacl-main.74.pdf) [[Code]](https://github.com/facebookresearch/FiD)
 
 ## PLM Analysis
 
@@ -189,6 +203,8 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 
 1. "Scaling Laws for Neural Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2001.08361.pdf)
 2. "Extracting Training Data from Large Language Models". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2012.07805.pdf) [[Code]](https://github.com/ftramer/LM_Memorization)
+3. "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜". `FACCT(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)
+4. "Extracting Training Data from Large Language Models". `USENIX(2021)` [[PDF]](https://www.usenix.org/system/files/sec21-carlini-extracting.pdf) [[Code]](https://github.com/ftramer/LM_Memorization)
 
 ## Efficient PLM
 
@@ -203,6 +219,10 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 7. **Admin**: "Understanding the Difficulty of Training Transformers". `EMNLP(2020)` [[PDF]](https://aclanthology.org/2020.emnlp-main.463.pdf) [[Code]](https://github.com/LiyuanLucasLiu/Transforemr-Clinic)
 8. **ZeRO**: "ZeRO: Memory optimizations Toward Training Trillion Parameter Models". `SC20: International Conference for High Performance Computing, Networking, Storage and Analysis` [[PDF]](https://ieeexplore.ieee.org/abstract/document/9355301) [[Code]](https://github.com/microsoft/deepspeed)
 9. **Switch Transformers**: "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.03961) [[Code]](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py)
+
+### Inference
+
+1. "BERT Loses Patience: Fast and Robust Inference with Early Exit". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/d4dd111a4fd973394238aca5c05bebe3-Paper.pdf) [[Code]](https://github.com/JetRunner/PABEE)
 
 ### Compression
 
@@ -219,6 +239,10 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 11. **MiniLM**: "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers". `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2002.10957.pdf) [[Code]](https://github.com/microsoft/unilm/tree/master/minilm)
 12. **FastBERT**: "FastBERT: a Self-distilling BERT with Adaptive Inference Time". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.537.pdf) [[Code]](https://github.com/autoliuweijie/FastBERT)
 13. **DeeBERT**: "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference". `ACL(2020)` [[PDF]](https://aclanthology.org/2020.acl-main.204.pdf) [[Code]](https://github.com/castorini/DeeBERT)
+14. "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT". `TACL(2021)` [[PDF]](https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00413/1964006/tacl_a_00413.pdf)
+15. "Winning the Lottery with Continuous Sparsification". `NeurIPS(2020)` [[PDF]](https://proceedings.neurips.cc/paper/2020/file/83004190b1793d7aa15f8d0d49a13eba-Paper.pdf) [[Code]](https://github.com/lolemacs/continuous-sparsification)
+16. **SqueezeBERT**: "SqueezeBERT: What can computer vision teach NLP about efficient neural networks?". `SustaiNLP(2020)` [[PDF]](https://aclanthology.org/2020.sustainlp-1.17.pdf)
+17. **Audio ALBERT**: "Audio Albert: A Lite Bert for Self-Supervised Learning of Audio Representation". `SLT(2021)` [[PDF]](https://ieeexplore.ieee.org/abstract/document/9383575) [[Code]](https://github.com/pohanchi/AALBERT)
 
 ## PLM Adaptation
 
@@ -248,6 +272,8 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 4. **LM-BFF**: "Making Pre-trained Language Models Better Few-shot Learners". `ACL(2021)` [[PDF]](https://arxiv.org/pdf/2012.15723) [[Code]](https://github.com/princeton-nlp/LM-BFF)
 5. "What Makes Good In-Context Examples for GPT-3?". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.06804.pdf) [[Code]](https://github.com/google-research/language/tree/master/language/totto)
 6. "The Power of Scale for Parameter-Efficient Prompt Tuning". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2104.08691.pdf)
+7. "Finetuned Language Models Are Zero-Shot Learners". `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2109.01652)
+8. "Calibrate Before Use: Improving Few-shot Performance of Language Models". `ICML(2021)` [[PDF]](http://proceedings.mlr.press/v139/zhao21c/zhao21c.pdf) [[Code]](https://www.github.com/tonyzhaozh/few-shot-learning)
 
 ### Others
 
