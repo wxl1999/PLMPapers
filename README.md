@@ -6,7 +6,7 @@
 
 Large-scale pre-trained language models (PLMs) such as BERT and GPT have achieved great success and become a milestone in NLP.
 
-In this repo, we collect some representative PLM papers in recent years based on the number of citations and papers in 2021 from top conferences (e.g., ACL, EMNLP, ICLR, ICML, NeurIPS).
+In this repo, we collect some representative PLM papers in recent years based on the number of citations and papers published in latest top conferences (e.g., ACL, EMNLP, ICLR, ICML, NeurIPS).
 
 We will keep the repo updated and welcome pull requests and issues! Thanks for your stars and forks!
 
