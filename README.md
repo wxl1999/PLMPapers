@@ -190,6 +190,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 5. "Reflective Decoding: Beyond Unidirectional Generation with Off-the-Shelf Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.114.pdf) [[Code]](https://homes.cs.washington.edu/~pawest/ReflectiveDecoding.html)
 6. **BERTAC**: "BERTAC: Enhancing Transformer-based Language Models with Adversarially Pretrained Convolutional Neural Networks". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.164.pdf) [[Code]](https://github.com/nict-wisdom/bertac)
 7. "Natural Language Understanding with Privacy-Preserving BERT". `CIKM(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3459637.3482281)
+8. **BANG**: "BANG: Bridging Autoregressive and Non-autoregressive Generation with Large Scale Pretraining". `ICML(2021)` [[PDF]](http://proceedings.mlr.press/v139/qi21a/qi21a.pdf) [[Code]](https://github.com/microsoft/BANG) 
 
 ## PLM Analysis
 
