@@ -116,6 +116,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 15. **ERICA**: "ERICA: Improving Entity and Relation Understanding for Pre-trained Language Models via Contrastive Learning". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.260.pdf) [[Code]](https://github.com/thunlp/ERICA)
 16. "Structural Guidance for Transformer Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.289.pdf) [[Code]](https://github.com/IBM/transformers-struct-guidance)
 17. **HORNET**: "HORNET: Enriching Pre-trained Language Representations with Heterogeneous Knowledge Sources". `CIKM(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3459637.3482436)
+18. "Drop Redundant, Shrink Irrelevant: Selective Knowledge Injection for Language Pretraining". `IJCAI(2021)` [[PDF]](https://www.ijcai.org/proceedings/2021/0552.pdf)
 
 ### Multilingual
 
@@ -133,6 +134,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 12. "A Simple Geometric Method for Cross-Lingual Linguistic Transformations with Pre-trained Autoencoders". `EMNLP(2021)` [[PDF]](https://aclanthology.org/2021.emnlp-main.792.pdf)
 13. "Boosting Cross-Lingual Transfer via Self-Learning with Uncertainty Estimation". `EMNLP(2021)` [[PDF]](https://aclanthology.org/2021.emnlp-main.538.pdf)
 14. "How Good is Your Tokenizer? On the Monolingual Performance of Multilingual Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.243.pdf) [[Code]](https://github.com/Adapter-Hub/hgiyt)
+15. "Multilingual Pre-training with Universal Dependency Learning". `NeurIPS(2021)` [[PDF]](https://proceedings.neurips.cc/paper/2021/file/473803f0f2ebd77d83ee60daaa61f381-Paper.pdf)
 
 ### Multi-Modal
 
@@ -163,6 +165,8 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 25. **ViViT**: "ViViT: A Video Vision Transformer". `ICCV(2021)` [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Arnab_ViViT_A_Video_Vision_Transformer_ICCV_2021_paper.pdf) [[Code]](https://github.com/google-research/scenic)
 26. **VirTex**: "VirTex: Learning Visual Representations From Textual Annotations". `CVPR(2021)` [[PDF]](https://openaccess.thecvf.com/content/CVPR2021/papers/Desai_VirTex_Learning_Visual_Representations_From_Textual_Annotations_CVPR_2021_paper.pdf) [[Code]](https://github.com/kdexd/virtex)
 27. **M6**: "M6: Multi-Modality-to-Multi-Modality Multitask Mega-transformer for Unified Pretraining". `KDD(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3447548.3467206)
+28. "Probing Inter-modality: Visual Parsing with Self-Attention for Vision-and-Language Pre-training". `NeurIPS(2021)` [[PDF]](https://proceedings.neurips.cc/paper/2021/file/23fa71cc32babb7b91130824466d25a5-Paper.pdf)
+29. **GilBERT**: "GilBERT: Generative Vision-Language Pre-Training for Modality-Incomplete Visual-Linguistic Tasks". `SIGIR(2021)` [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3404835.3462838)
 
 ### Information Retrieval
 
@@ -264,6 +268,7 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 14. "When Do You Need Billions of Words of Pretraining Data?". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.90.pdf) [[Code]](https://github.com/nyu-mll/pretraining-learning-curves)
 15. "BERT is to NLP what AlexNet is to CV: Can Pre-Trained Language Models Identify Analogies?". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.280.pdf) [[Code]](https://github.com/asahi417/analogy-language-model)
 16. "Examining the Inductive Bias of Neural Language Models with Artificial Languages". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.38.pdf) [[Code]](https://github.com/rycolab/artificial-languages)
+17. "Why Do Pretrained Language Models Help in Downstream Tasks? An Analysis of Head and Prompt Tuning". `NeurIPS(2021)` [[PDF]](https://proceedings.neurips.cc/paper/2021/file/86b3e165b8154656a71ffe8a327ded7d-Paper.pdf) 
 
 ## Efficient PLM
 
@@ -383,3 +388,4 @@ We will keep the repo updated and welcome pull requests and issues! Thanks for y
 11. **LexFit**: "LexFit: Lexical Fine-Tuning of Pretrained Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.410.pdf) [[Code]](https://github.com/cambridgeltl/lexfit)
 12. "Selecting Informative Contexts Improves Language Model Fine-tuning". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.87.pdf) [[Code]](https://github.com/HuthLab/IGF)
 13. "An Empirical Study on Hyperparameter Optimization for Fine-Tuning Pre-trained Language Models". `ACL(2021)` [[PDF]](https://aclanthology.org/2021.acl-long.178.pdf) [[Code]](https://github.com/microsoft/FLAML/tree/main/flaml/nlp/)
+14. "How Should Pre-Trained Language Models Be Fine-Tuned Towards Adversarial Robustness?". `NeurIPS(2021)` [[PDF]](https://proceedings.neurips.cc/paper/2021/file/22b1f2e0983160db6f7bb9f62f4dbb39-Paper.pdf) [[Code]](https://github.com/dongxinshuai/RIFT-NeurIPS2021)
