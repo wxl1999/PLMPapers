@@ -2,9 +2,11 @@
 
 ![](https://img.shields.io/github/last-commit/RUCAIBox/PLMPapers?color=blue) ![](https://img.shields.io/badge/PaperNumber-285-brightgreen) ![](https://img.shields.io/badge/PRs-Welcome-red)
 
+> Contributed by [Xiaolei Wang](https://github.com/wxl1999)
+
 Large-scale pre-trained language models (PLMs) such as BERT and GPT have achieved great success and become a milestone in NLP.
 
-In this repo, we collect some representative PLM papers in recent years based on the number of citations.
+In this repo, we collect some representative PLM papers in recent years based on the number of citations and papers in 2021 from top conferences (e.g., ACL, EMNLP, ICLR, ICML, NeurIPS).
 
 We will keep the repo updated and welcome pull requests and issues! Thanks for your stars and forks!
 
